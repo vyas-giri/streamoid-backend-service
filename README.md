@@ -29,7 +29,7 @@ Built with: **Python 3.11**, **FastAPI**, **Pydantic**, **SQLAlchemy**, and **SQ
 
 ---
 
-## 🚀 Quick Start - Local
+## Quick Start - Local
 
 1. **Clone repository**
 ```bash
@@ -86,7 +86,26 @@ You can run automated test using pytest:
 pytest -v
 ```
 Expected outcome:
-```bash ========================================================================================= test session starts platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0 -- /home/batman/Documents/streamoid-backend/.venv/bin/python3 cachedir: .pytest_cache rootdir: /home/batman/Documents/streamoid-backend plugins: anyio-4.11.0 collected 4 items tests/test_api.py::test_root PASSED [ 25%] tests/test_api.py::test_upload_csv PASSED [ 50%] tests/test_api.py::test_get_products PASSED [ 75%] tests/test_api.py::test_search_products PASSED [100%] ========================================================================================= 4 passed in 2.28s ========================================================================================= ```
 
-**API endpoints overview**
-```markdown | Endpoint | Method | Description | |----------------------|--------|-------------------------------------------------------| | `/` | GET | Root endpoint, returns a greeting message. | | `/upload` | POST | Upload CSV file with product data. Returns stored & failed rows. | | `/products` | GET | Paginated list of products (use `page` & `limit` query parameters). | | `/products/search` | GET | Search products by `brand`, `name`, or `sku`. | ```
+```
+========================================================================================= test session starts platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+collected 4 items
+
+tests/test_api.py::test_root PASSED [ 25%]
+tests/test_api.py::test_upload_csv PASSED [ 50%]
+tests/test_api.py::test_get_products PASSED [ 75%]
+tests/test_api.py::test_search_products PASSED [100%]
+
+========================================================================================= 4 passed in 2.28s =========================================================================================
+```
+
+---
+
+## API Endpoints Overview
+
+| Endpoint               | Method | Description                                           |
+|------------------------|--------|-------------------------------------------------------|
+| `/`                    | GET    | Root endpoint, returns a greeting message.           |
+| `/upload`              | POST   | Upload CSV file with product data. Returns stored & failed rows. |
+| `/products`            | GET    | Paginated list of products (use `page` & `limit` query parameters). |
+| `/products/search`     | GET    | Search products by `brand`, `name`, or `sku`.       |

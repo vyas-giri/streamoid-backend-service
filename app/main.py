@@ -12,4 +12,4 @@ app.include_router(products.router)
 
 @app.get('/')
 async def root():
-    return {"message": "Hello"}
+    return {"message": '''Streamoid Product API  ---------->  Go to /docs or /redoc for API documentation.'''}

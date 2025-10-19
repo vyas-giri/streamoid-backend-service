@@ -77,7 +77,7 @@ source .venv/bin/activate
 
 **Example get request:**
 ```bash
-curl -X GET "http://127.0.0.1:8000/products/?page=1&limit=10" -H "accept: application/json"
+curl -X GET "http://127.0.0.1:8000/products?page=1&limit=10" -H "accept: application/json"
 ```
 
 **Testing**

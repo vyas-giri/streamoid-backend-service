@@ -81,6 +81,7 @@ curl -X GET "http://127.0.0.1:8000/products?page=1&limit=10" -H "accept: applica
 ```
 
 **Testing**
+
 You can run automated test using pytest:
 ```bash
 pytest -v
@@ -108,4 +109,4 @@ tests/test_api.py::test_search_products PASSED [100%]
 | `/`                    | GET    | Root endpoint, returns a greeting message.           |
 | `/upload`              | POST   | Upload CSV file with product data. Returns stored & failed rows. |
 | `/products`            | GET    | Paginated list of products (use `page` & `limit` query parameters). |
-| `/products/search`     | GET    | Search products by `brand`, `name`, or `sku`.       |
+| `/products/search`     | GET    | Search products by `brand`, `name`, `color`, `minPrice` and/or `maxPrice`.       |
